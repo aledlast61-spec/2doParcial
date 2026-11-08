@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="favicon2.ico">
+    <link rel="stylesheet" href="estilo.css">
+    
+    <title>Indice</title>
+</head>
+<body>
+    <h1>Historia de México</h1>
+    <p>Selecciona una progresión para continuar:</p>
+    <hr>
+    <ul class="menu">
+        <li><a href="Progresion1.html">Progresión 1: Independencia de México</a></li>
+        <li><a href="Progresion2.html">Progresión 2: El Liberalismo en México</a></li>
+        <li><a href="Progresion3.html">Progresión 3: La invasión de Francia y Estados Unidos a México</a></li>
+        <li><a href="Progresion4.html">Progresión 4: Lucha por los derechos en México del siglo XIX</a></li>
+        <li><a href="Progresion5.html">Progresión 5: El México conservador del siglo XIX</a></li>
+        <li><a href="progresion6.html">Progresión 6: La desamortización de tierras comunales</a></li>
+        <li><a href="progresion7.html">Progresión 7: El porfiriato</a></li>
+        <li><a href="progresion8.html">Progresión 8: La revolución de México</a></li>
+        <li><a href="Extra.html">Extra: Cuadro comparativo</a></li>
+        <li><a href="Recursos.html">Recursos</a></li>
+        <li><a href="Contacto.html">Contacto</a></li>
+    </ul>
+    
+    <hr>
+    <a href="../index.html">Volver al index</a>
+    
+    <style>
+
+        .alerta {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: white;
+            padding: 20px;
+            width: 280px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            font-family: Arial, sans-serif;
+            z-index: 9999;
+        }
+
+        .alerta h3 {
+            margin-top: 0;
+            color: #447F98;
+        }
+
+        .alerta p {
+            font-size: 14px;
+            color: #444;
+        }
+
+        .alerta button {
+            background: #447F98;
+            color: white;
+            border: none;
+            padding: 9px 15px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+    </style>
+
+    <div class="alerta" id="alertaBienvenida">
+
+        <h3>¡Bienvenido!</h3>
+
+        <p>Tenemos novedades en nuestro sitio:</p>
+
+        <p>
+            ✓ 3 progresiones nuevas.<br>
+             -Progresión 6: La desamortización de tierras comunales<br>
+             -Progresión 7: El porfiriato<br>
+             -Progresión 8: La revolución de México<br>
+            ✓ 1 infografía.<br>
+            ✓ Nuevo capítulo de podcast.
+        </p>
+
+        <button onclick="cerrarAlerta('alertaBienvenida')">
+            Entendido
+        </button>
+    </div>
+
+    <script>
+        function cerrarAlerta(id) {
+            document.getElementById(id).style.display = "none";
+        }
+    </script>
+</body>
+</html>

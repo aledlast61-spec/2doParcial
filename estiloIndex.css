@@ -1,0 +1,77 @@
+/*
+   Hoja de estilos exclusiva para index.html
+   Misma paleta y estilo que estilo.css
+
+   Turquoise  #447F98
+   Slate Blue #629BB5
+   Platinum   #DADEE1
+   Glacier    #B9D8E1
+   Ice Blue   #D6EBF3
+*/
+
+* {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+  background-color: #D6EBF3;
+}
+
+h3 {
+  background-color: #629BB5;
+  color: white;
+  padding: 10px 15px;
+}
+
+/* Los títulos de cada sección ("prácticas: ...") */
+p {
+  background-color: #629BB5;
+  color: white;
+  padding: 10px 15px;
+  font-size: 1.17em;
+  font-weight: bold;
+}
+
+hr {
+  border: none;
+  height: 2px;
+  background-color: #B9D8E1;
+  margin: 25px 0;
+}
+
+ol, ul {
+  padding-left: 40px;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+li::marker {
+  color: #447F98;
+  font-weight: bold;
+}
+
+a:link, a:visited {
+  background-color: #447F98;
+  color: white;
+  padding: 8px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 25px;
+}
+
+a:hover, a:active {
+  background-color: #629BB5;
+}
+
+@media (max-width: 600px) {
+
+  h3 { font-size: 1.1em; padding: 8px 10px; }
+  p  { font-size: 1.05em; padding: 8px 10px; }
+
+  ol, ul { padding-left: 25px; }
+
+  a:link, a:visited { padding: 8px 16px; }
+}
