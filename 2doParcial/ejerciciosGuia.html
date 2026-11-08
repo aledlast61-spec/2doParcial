@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejerciciosClassroom</title>
+</head>
+<body>
+    <p id="mensaje">hola mundo</p>
+    <script>
+        document.getElementById("mensaje").innerHTML="bienvenido!";
+    </script>
+    <div id="imagen"></div>
+    <script>
+        document.getElementById("imagen").innerHTML='<img src="astronauta.png" alt="logo">';
+    </script>
+
+    <p id="aviso">mensaje inicial</p>
+    <script>
+        var elemento = document.getElementById("aviso");
+        elemento.textContent = "hola estudiantes";
+    </script>
+    <button id="btn">haz click</button>
+    <script>
+        document.getElementById("btn").style.color = "red";
+    </script>
+
+    <p class="destacado">texto importante</p>
+    <script>
+        document.querySelector(".destacado").style.color = "green";
+    </script>
+    <button class="btn">enviar</button>
+    <script>
+        document.querySelector(".btn").disabled = "true";
+    </script>
+</body>
+</html>
