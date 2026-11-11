@@ -13,8 +13,22 @@
     font-family: 'Times New Roman', Times, serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #D6EBF3;
+  margin: 0;
+}
+
+main {
+  padding: 0 20px 30px;
+}
+
+/* Al saltar a una sección, la barra fija no debe tapar el título */
+section {
+  scroll-margin-top: 90px;
 }
 
 h3 {
@@ -39,17 +53,12 @@ hr {
   margin: 25px 0;
 }
 
-ol, ul {
-  padding-left: 40px;
-}
-
-li {
-  margin-bottom: 10px;
-}
-
-li::marker {
-  color: #447F98;
-  font-weight: bold;
+/* Botones independientes en cuadrícula */
+.botones {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+  padding: 10px 0 5px;
 }
 
 a:link, a:visited {
@@ -66,12 +75,78 @@ a:hover, a:active {
   background-color: #629BB5;
 }
 
+.botones a {
+  display: block;
+  box-sizing: border-box;
+}
+
+/* Barra de navegación superior */
+.navegacion {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  background-color: #447F98;
+  padding: 10px 20px;
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /*box-sizing: border-box;
+  border: 2px dashed #D6EBF3;*/
+  border-radius: 12px;
+  color: #D6EBF3;
+  font-size: 0.8em;
+  overflow: hidden;
+}
+
+.logo img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.navegacion a:link, .navegacion a:visited {
+  background-color: #629BB5;
+  color: white;
+  padding: 8px 20px;
+}
+
+/* Al pasar el cursor: tono más claro; al retirarlo vuelve al original */
+.navegacion a:hover, .navegacion a:active {
+  background-color: #B9D8E1;
+  color: #2F5F75;
+}
+
 @media (max-width: 600px) {
+
+  main { padding: 0 12px 24px; }
+  .navegacion { padding: 8px 12px; justify-content: center; }
+  .menu { justify-content: center; }
+  .navegacion a:link, .navegacion a:visited { padding: 8px 14px; }
+  .botones { grid-template-columns: 1fr; gap: 12px; }
 
   h3 { font-size: 1.1em; padding: 8px 10px; }
   p  { font-size: 1.05em; padding: 8px 10px; }
 
-  ol, ul { padding-left: 25px; }
-
   a:link, a:visited { padding: 8px 16px; }
+}
+
+img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
 }
